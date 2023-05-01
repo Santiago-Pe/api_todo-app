@@ -1,6 +1,6 @@
 /* ---------- Requires ----------*/
 const express = require('express');
-const mongoose = require('monoogse');
+const mongoose = require('mongoose');
 require('dotenv').config();;
 
 /* ---------- Consts ??? ----------*/
@@ -13,7 +13,10 @@ app.get('/', (req, res) => {
 })
 
 /* ---------- Mongo db conection ----------*/
-mongoose.connect()
+// PROMOESA
+mongoose.connect(process.env.MONGODB_URI)
+.then(() => console.log('conected to mongo db database'))
+.catch((err) => console.log(err))
 
 /* ---------- ???? ----------*/
 app.listen(port, () => console.log('server listening on port: ', port));
