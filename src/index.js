@@ -1,6 +1,7 @@
 /* ---------- Requires ----------*/
 const express = require('express');
 const mongoose = require('monoogse');
+require('dotenv').config();;
 
 /* ---------- Consts ??? ----------*/
 const app = express();
